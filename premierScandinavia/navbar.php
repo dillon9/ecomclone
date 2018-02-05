@@ -6,25 +6,25 @@
             <a href="index.php">Home</a>
         </li>
         <li>
-            <a href="sale.php">Search By Country</a>
+            <a href="sale.php">Browse</a>
             <ul>
-                <li><a href="">Sweden</a></li>
-                <li><a href="">Norway</a></li>
-                <li><a href="">Denmark</a></li>
+                <li><a href="sRecords.php">Sweden</a></li>
+                <li><a href="nRecords.php">Norway</a></li>
+                <li><a href="dRecords.php">Denmark</a></li>
             </ul>
             
         </li>
         <li>
-            <a href="">Generic 2</a>
+            <a href="">d</a>
 
         </li>
         <li>
-            <a href="">Generic 3</a>
+            <a href="about.php">About</a>
         </li>
         <li>
-            <a href="">Sign up</a>
+            <a href="makeAccount.php">Sign up</a>
             <ul>
-                <li><a href="">Log in</a></li>
+                <li><a href="login.php">Log in</a></li>
             </ul>
         </li>
 	</ul>

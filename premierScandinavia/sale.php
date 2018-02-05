@@ -10,12 +10,10 @@
         <title>Premier Scandinavia</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="bootstrap.min.css">
     </head>
     <body>
         <header><?php require "navbar.php";?></header>
-            Dedicated to bringing you the highest quality
-            Scandinavian albums that you might struggle to find.
+
     </body>
 </html>
