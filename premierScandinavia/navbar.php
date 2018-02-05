@@ -6,7 +6,7 @@
             <a href="index.php">Home</a>
         </li>
         <li>
-            <a href="sale.php">Browse</a>
+            <a href="saleall.php">Browse</a>
             <ul>
                 <li><a href="sRecords.php">Sweden</a></li>
                 <li><a href="nRecords.php">Norway</a></li>
