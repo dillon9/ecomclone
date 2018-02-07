@@ -15,9 +15,15 @@
     </head>
     <body>
         <header><?php require "navbar.php";?></header>
-        <nav class="featC">
+        <div class="featC">
             Dedicated to bringing the world the most underrated
             Scandinavian albums.
-        </nav>
+        </div>
+        <div class="featImg">
+            <img src="css/p1.png" alt = "featured album 1">
+            <img src="css/p1.png" alt = "featured album 1">
+            <img src="css/p1.png" alt = "featured album 1">
+            <img src="css/p1.png" alt = "featured album 1">
+            </div>
     </body>
 </html>
