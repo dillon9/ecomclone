@@ -15,7 +15,9 @@
     </head>
     <body>
         <header><?php require "navbar.php";?></header>
-            Dedicated to bringing you the highest quality
-            Scandinavian albums that you might struggle to find.
+        <nav class="featC">
+            Dedicated to bringing the world the most underrated
+            Scandinavian albums.
+        </nav>
     </body>
 </html>

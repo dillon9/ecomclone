@@ -15,6 +15,8 @@
     </head>
     <body>
         <header><?php require "navbar.php";?></header>
-
+            <nav class="featC">
+                
+            </nav>
     </body>
 </html>
