@@ -15,7 +15,7 @@
     </head>
     <body>
         <header><?php require "navbar.php";?></header>
-        <div class="featc">
+        <div class="featcm">
             Dedicated to bringing the world the most underrated
             Scandinavian albums.
         </div>

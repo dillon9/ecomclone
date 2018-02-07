@@ -15,8 +15,15 @@
     </head>
     <body>
         <header><?php require "navbar.php";?></header>
-            <nav class="featC">
-                
+            <nav class="featca">
+                I'm a DSU student and I want to share this amazing music 
+                with everyone.  Some of the most underrated pop, punk, 
+                electronic, and metal comes from Scandinavia.  How many
+                people have really heard of Asta Kask, Lissi Dance Floor
+                Disaster, or Lastkaj 14.  How many people actually knew 
+                Ace of Base and ABBA were from Sweden.  This is a travesty
+                and I intend to do something about it.
+
             </nav>
     </body>
 </html>

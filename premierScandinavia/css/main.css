@@ -2,13 +2,22 @@ body{
 	background-color:#F2F2F2;
 }
 
-.featc{
+.featcm{
 position: absolute;
 left: 50%;
 right:50%;
 transform:translate(-50%,-50%);
 width:40%;
-margin-top:10px;
+margin-top:2%;
+}
+
+.featca{
+position: absolute;
+left: 50%;
+right:50%;
+transform:translate(-50%,-50%);
+width:40%;
+margin-top:5%;
 }
 
 
@@ -18,7 +27,7 @@ margin-top:10px;
 	right:50%;
 	transform:translate(-50%,-50%);
 	width:40%;
-	margin-top:20%;
+	margin-top:22%;
 	display:grid;
 	grid-template-columns: 200px 200px;
 	grid-row: auto auto;
