@@ -21,14 +21,14 @@
         <div class="each2"><img src="css/p2.png" alt = "featured album 2"></div>
         <div class="each2"><img src="css/p3.png" alt = "featured album 3"></div>
         <div class="each2"><img src="css/p4.png" alt = "featured album 4"></div>
+        <div class="each2"><img src="css/p2.png" alt = "featured album 1"></div>
+        <div class="each2"><img src="css/p3.png" alt = "featured album 2"></div>
+        <div class="each2"><img src="css/p4.png" alt = "featured album 3"></div>
+        <div class="each2"><img src="css/p1.png" alt = "featured album 4"></div>
         <div class="each2"><img src="css/p1.png" alt = "featured album 1"></div>
-        <div class="each2"><img src="css/p2.png" alt = "featured album 2"></div>
-        <div class="each2"><img src="css/p3.png" alt = "featured album 3"></div>
-        <div class="each2"><img src="css/p4.png" alt = "featured album 4"></div>
-        <div class="each2"><img src="css/p1.png" alt = "featured album 1"></div>
-        <div class="each2"><img src="css/p2.png" alt = "featured album 2"></div>
-        <div class="each2"><img src="css/p3.png" alt = "featured album 3"></div>
-        <div class="each2"><img src="css/p4.png" alt = "featured album 4"></div>
+        <div class="each2"><img src="css/p4.png" alt = "featured album 2"></div>
+        <div class="each2"><img src="css/p2.png" alt = "featured album 3"></div>
+        <div class="each2"><img src="css/p3.png" alt = "featured album 4"></div>
         </div>
 
 
