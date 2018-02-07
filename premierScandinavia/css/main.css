@@ -11,6 +11,15 @@ width:40%;
 margin-top:2%;
 }
 
+.simple{
+position: absolute;
+left: 50%;
+right:50%;
+transform:translate(-50%,-50%);
+width:20%;
+margin-top:1%;
+}
+
 .featca{
 position: absolute;
 left: 50%;
@@ -41,3 +50,28 @@ margin-top:5%;
     align-items:center;
     justify-content:center;
 }
+
+.featimg2{
+	position: absolute;
+	left: 50%;
+	right:50%;
+	transform:translate(-50%,-50%);
+	width:80%;
+	margin-top:27%;
+	display:grid;
+	grid-template-columns: 200px 200px 200px 200px;
+	grid-row: auto auto;
+	grid-column-gap: 4%;
+	grid-row-gap: 4%;
+ }
+
+ .each2{
+    padding:8%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+
+
+

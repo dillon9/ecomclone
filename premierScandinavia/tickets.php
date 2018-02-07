@@ -15,6 +15,9 @@
     </head>
     <body>
         <header><?php require "navbar.php";?></header>
+        <div class="simple">
+            Tickets to local shows.  Under construction.
+        </div>
 
     </body>
 </html>
