@@ -16,9 +16,9 @@
             <a href="about.php">About</a>
         </li>
         <li>
-            <a href="makeAccount.php">Sign up</a>
+            <a href="login.php">Log in</a>
             <ul>
-                <li><a href="login.php">Log in</a></li>
+                <li><a href="newAccount.php">Sign up</a></li>
             </ul>
         </li>
 	</ul>
