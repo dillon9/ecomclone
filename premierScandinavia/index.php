@@ -1,4 +1,3 @@
-
 <?php require "secure.php";?>
 
 <!DOCTYPE html>
@@ -29,10 +28,5 @@
   <div class="each"><img src="css/p3.png" alt = "featured album 3"></div>
   <div class="each"><img src="css/p4.png" alt = "featured album 4"></div>
 </div>
-
-
-
-
-
     </body>
 </html>

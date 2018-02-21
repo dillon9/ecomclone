@@ -19,6 +19,8 @@
         <form action = "process_create.php" method = "post">
             Username:
             <input type = "text" name = "id">
+            <br>Email:
+            <input type = "text" name = "email">
             <br>Password:
             <input type = "password" name = "password">
             <br>
