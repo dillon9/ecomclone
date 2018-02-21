@@ -2,6 +2,10 @@ body{
 	background-color:#F2F2F2;
 }
 
+.login{
+	margin-left:2%;
+}
+
 .featcm{
 position: absolute;
 left: 50%;

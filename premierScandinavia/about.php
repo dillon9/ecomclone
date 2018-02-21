@@ -15,6 +15,7 @@
     </head>
     <body>
         <header><?php require "navbar.php";?></header>
+        <br>
             <div class="featca">
                 I'm a DSU student and I want to share this amazing music 
                 with everyone.  Some of the most underrated pop, punk, 
