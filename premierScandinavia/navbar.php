@@ -1,3 +1,4 @@
+<?php session_start();?>
 <link rel="stylesheet" type="text/css" href="css/navbar_styles.css">
 <div class="nav">
 	<div class="inner">
@@ -16,10 +17,28 @@
             <a href="about.php">About</a>
         </li>
         <li>
-            <a href="login.php">Log in</a>
+            <a>
+                <?php 
+                if(isset($_SESSION["id"])){ 
+                    echo $_SESSION["users"];
+                    echo '<a href="orders.php">\'s Orders</a>';
+                }
+                elseif(!(isset($_SESSION["id"]))) 
+                    echo '<a href="login.php">Login</a>';
+            ?>
+        </a>
             <ul>
-                <li><a href="newAccount.php">Sign up</a></li>
+                <li><a>
+                <?php 
+                if(isset($_SESSION["id"])){ 
+                    echo '<a href="Logout.php">Logout</a>';
+                }
+                elseif(!(isset($_SESSION["id"]))) 
+                    echo '<a href="newAccount.php">Create Account</a>';
+            ?>
+            </a></li>
             </ul>
+
         </li>
 	</ul>
 </div>

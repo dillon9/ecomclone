@@ -12,7 +12,7 @@ $checker = $query->fetch();
 }
 if ($checker){
 	$_SESSION["id"] = $checker["id"];
-	$_SESSION["users"] = $checker["userId"];
+	$_SESSION["users"] = $checker["username"];
 	header("location:index.php");
 	}
 else{
