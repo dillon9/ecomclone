@@ -21,7 +21,7 @@
                 <?php 
                 if(isset($_SESSION["id"])){ 
                     echo $_SESSION["users"];
-                    echo '<a href="orders.php">\'s Orders</a>';
+                    echo '<a href="cart.php">\'s Cart</a>';
                 }
                 elseif(!(isset($_SESSION["id"]))) 
                     echo '<a href="login.php">Login</a>';
