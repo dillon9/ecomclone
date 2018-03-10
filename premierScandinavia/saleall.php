@@ -17,18 +17,18 @@
         <header><?php require "navbar.php";?></header>
 
         <div class="featimg2">
-        <div class="each2"><img src="css/p1.png" alt = "featured album 1"></div>
-        <div class="each2"><img src="css/p2.png" alt = "featured album 2"></div>
-        <div class="each2"><img src="css/p3.png" alt = "featured album 3"></div>
-        <div class="each2"><img src="css/p4.png" alt = "featured album 4"></div>
-        <div class="each2"><img src="css/p2.png" alt = "featured album 1"></div>
-        <div class="each2"><img src="css/p3.png" alt = "featured album 2"></div>
-        <div class="each2"><img src="css/p4.png" alt = "featured album 3"></div>
-        <div class="each2"><img src="css/p1.png" alt = "featured album 4"></div>
-        <div class="each2"><img src="css/p1.png" alt = "featured album 1"></div>
-        <div class="each2"><img src="css/p4.png" alt = "featured album 2"></div>
-        <div class="each2"><img src="css/p2.png" alt = "featured album 3"></div>
-        <div class="each2"><img src="css/p3.png" alt = "featured album 4"></div>
+        <div class="each2"><img src="css/albumArt/abbavou.png" alt = "featured album 1"></div>
+        <div class="each2"><img src="css/albumArt/akhanden.png" alt = "featured album 2"></div>
+        <div class="each2"><img src="css/albumArt/aobsign.png" alt = "featured album 3"></div>
+        <div class="each2"><img src="css/albumArt/hellagod.png" alt = "featured album 4"></div>
+        <div class="each2"><img src="css/albumArt/hellarock.png" alt = "featured album 1"></div>
+        <div class="each2"><img src="css/albumArt/hellavis.png" alt = "featured album 2"></div>
+        <div class="each2"><img src="css/albumArt/lk14becks.png" alt = "featured album 3"></div>
+        <div class="each2"><img src="css/albumArt/lk14som.png" alt = "featured album 4"></div>
+        <div class="each2"><img src="css/albumArt/lk14storm.png" alt = "featured album 1"></div>
+        <div class="each2"><img src="css/albumArt/tbngrapoc.png" alt = "featured album 2"></div>
+        <div class="each2"><img src="css/albumArt/tbngrretox.png" alt = "featured album 3"></div>
+        <div class="each2"><img src="css/albumArt/tbngrscand.png" alt = "featured album 4"></div>
         </div>
 
 

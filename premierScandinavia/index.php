@@ -21,22 +21,22 @@
         </div>
 <?php require "helper.php";
 $db=database();
-$query=$db->query("SELECT name FROM albums ORDER BY RAND() LIMIT 12");
+$query=$db->query("SELECT name FROM albums ORDER BY RAND() LIMIT 1");
 $query = $query->fetch();
 //echo $query["name"];
 ?>
 <div class="featimg">
   <div class="each"><img src="css/albumArt/<?php echo $query["name"];?>" alt = "featured album 1"></div>
   <?php 
-  $query=$db->query("SELECT name FROM albums ORDER BY RAND() LIMIT 12");
+  $query=$db->query("SELECT name FROM albums ORDER BY RAND() LIMIT 1");
   $query = $query->fetch(); ?>
   <div class="each"><img src="css/albumArt/<?php echo $query["name"];?>" alt = "featured album 2"></div>
   <?php 
-  $query=$db->query("SELECT name FROM albums ORDER BY RAND() LIMIT 12");
+  $query=$db->query("SELECT name FROM albums ORDER BY RAND() LIMIT 1");
   $query = $query->fetch(); ?>
   <div class="each"><img src="css/albumArt/<?php echo $query["name"];?>" alt = "featured album 3"></div>
   <?php 
-  $query=$db->query("SELECT name FROM albums ORDER BY RAND() LIMIT 12");
+  $query=$db->query("SELECT name FROM albums ORDER BY RAND() LIMIT 1");
   $query = $query->fetch(); ?>
   <div class="each"><img src="css/albumArt/<?php echo $query["name"];?>" alt = "featured album 4"></div>
 </div>
