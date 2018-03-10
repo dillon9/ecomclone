@@ -20,26 +20,31 @@
             Scandinavian albums.
         </div>
 
-<div class="featimg">
-  <div class="each">
 <?php require "helper.php";
 $db=database();
-$query=$db->query("SELECT name FROM albums ORDER BY RAND() LIMIT 1");
+$query=$db->query("SELECT name, displayName, price FROM albums ORDER BY RAND() LIMIT 1");
 $query = $query->fetch();
-//echo $query['price'];
-?><img src="css/albumArt/<?php echo $query["name"];?>" alt = "featured album 1"></div>
+?>
+<div class="featimg">
+  <div class="each">
+<img src="css/albumArt/<?php echo $query["name"];?>" alt = "featured album 1">
+<div class="under"><?php echo $query["price"]; ?></div>
+</div>
+
   <?php 
-  $query=$db->query("SELECT name FROM albums ORDER BY RAND() LIMIT 1");
-  $query = $query->fetch(); ?>
-  <div class="each"><img src="css/albumArt/<?php echo $query["name"];?>" alt = "featured album 2"></div>
+  $query=$db->query("SELECT name, displayName, price FROM albums ORDER BY RAND() LIMIT 1");
+  $query = $query->fetch();
+  ?>
+  <div class="each"><img src="css/albumArt/<?php echo $query["name"];?>" alt = "featured album 2"><div class="under2"><?php echo $query["price"]; ?></div>
+  </div>
   <?php 
-  $query=$db->query("SELECT name FROM albums ORDER BY RAND() LIMIT 1");
+  $query=$db->query("SELECT name, displayName, price FROM albums ORDER BY RAND() LIMIT 1");
   $query = $query->fetch(); ?>
-  <div class="each"><img src="css/albumArt/<?php echo $query["name"];?>" alt = "featured album 3"></div>
+  <div class="each"><img src="css/albumArt/<?php echo $query["name"];?>" alt = "featured album 3"><div class="under3"><?php echo $query["price"]; ?></div></div>
   <?php 
-  $query=$db->query("SELECT name FROM albums ORDER BY RAND() LIMIT 1");
+  $query=$db->query("SELECT name, displayName, price FROM albums ORDER BY RAND() LIMIT 1");
   $query = $query->fetch(); ?>
-  <div class="each"><img src="css/albumArt/<?php echo $query["name"];?>" alt = "featured album 4"></div>
+  <div class="each"><img src="css/albumArt/<?php echo $query["name"];?>" alt = "featured album 4"><div class="under4"><?php echo $query["price"]; ?></div></div>
 </div>
     </body>
 </html>

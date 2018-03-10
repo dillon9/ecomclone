@@ -33,6 +33,41 @@ width:40%;
 margin-top:5%;
 }
 
+.under{
+	margin:2px;
+	display:inline-block;
+	vertical-align:top;
+	position: absolute;
+	bottom:48%;
+	left:5%;
+}
+
+.under2{
+	margin:2px;
+	display:inline-block;
+	vertical-align:top;
+	position: absolute;
+	bottom:48%;
+	left:78%;
+}
+
+.under3{
+	margin:2px;
+	display:inline-block;
+	vertical-align:top;
+	position: absolute;
+	bottom:-2%;
+	left:5%;
+}
+
+.under4{
+	margin:2px;
+	display:inline-block;
+	vertical-align:top;
+	position: absolute;
+	bottom:-2%;
+	left:78%;
+}
 
 .featimg{
 	position: absolute;
