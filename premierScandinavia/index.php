@@ -19,12 +19,26 @@
             Dedicated to bringing the world the most underrated
             Scandinavian albums.
         </div>
-
+<?php require "helper.php";
+$db=database();
+$query=$db->query("SELECT name FROM albums ORDER BY RAND() LIMIT 12");
+$query = $query->fetch();
+//echo $query["name"];
+?>
 <div class="featimg">
-  <div class="each"><img src="css/p1.png" alt = "featured album 1"></div>
-  <div class="each"><img src="css/p2.png" alt = "featured album 2"></div>
-  <div class="each"><img src="css/p3.png" alt = "featured album 3"></div>
-  <div class="each"><img src="css/p4.png" alt = "featured album 4"></div>
+  <div class="each"><img src="css/albumArt/<?php echo $query["name"];?>" alt = "featured album 1"></div>
+  <?php 
+  $query=$db->query("SELECT name FROM albums ORDER BY RAND() LIMIT 12");
+  $query = $query->fetch(); ?>
+  <div class="each"><img src="css/albumArt/<?php echo $query["name"];?>" alt = "featured album 2"></div>
+  <?php 
+  $query=$db->query("SELECT name FROM albums ORDER BY RAND() LIMIT 12");
+  $query = $query->fetch(); ?>
+  <div class="each"><img src="css/albumArt/<?php echo $query["name"];?>" alt = "featured album 3"></div>
+  <?php 
+  $query=$db->query("SELECT name FROM albums ORDER BY RAND() LIMIT 12");
+  $query = $query->fetch(); ?>
+  <div class="each"><img src="css/albumArt/<?php echo $query["name"];?>" alt = "featured album 4"></div>
 </div>
     </body>
 </html>
