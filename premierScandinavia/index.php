@@ -32,9 +32,9 @@ $db=database();
 $query=$db->query("SELECT name, displayName, price FROM albums");
 $query = $query->fetchAll();
 $q = array($query[rand(0,11)], $query[rand(0,11)], $query[rand(0,11)], $query[rand(0,11)]);
-while (checkDupes($q)){
+while (checkDupes($q))
 $q = array($query[rand(0,11)], $query[rand(0,11)], $query[rand(0,11)], $query[rand(0,11)]);
-}
+
 ?>
 <div class="featimg">
   <div class="each">
