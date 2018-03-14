@@ -1,6 +1,6 @@
 <?php
-require "helper.php";
 session_start();
+require "helper.php";
 $error = "";
 $db = database();
 if (isset($_POST["login"])){

@@ -1,6 +1,6 @@
 <?php
-require "helper.php";
 session_start();
+require "helper.php";
 if (isset($_POST["add"])){
 $db = database();
 $id = $_POST["id"];
