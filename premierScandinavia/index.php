@@ -21,30 +21,30 @@
         </div>
 
 <?php require "helper.php";
+
+function checkDupes($nameDupes){
+    $use = array($nameDupes[0]["name"], $nameDupes[1]["name"], $nameDupes[2]["name"], $nameDupes[3]["name"]);
+    if (count($use) !== count(array_unique($use)))return true;
+    return false;
+}
+
 $db=database();
-$query=$db->query("SELECT name, displayName, price FROM albums ORDER BY RAND() LIMIT 1");
-$query = $query->fetch();
+$query=$db->query("SELECT name, displayName, price FROM albums");
+$query = $query->fetchAll();
+$q = array($query[rand(0,11)], $query[rand(0,11)], $query[rand(0,11)], $query[rand(0,11)]);
+while (checkDupes($q)){
+$q = array($query[rand(0,11)], $query[rand(0,11)], $query[rand(0,11)], $query[rand(0,11)]);
+}
 ?>
 <div class="featimg">
   <div class="each">
-<img src="css/albumArt/<?php echo $query["name"];?>" alt = "featured album 1">
-<div class="under"><?php echo $query["price"]; ?></div>
+<img src="css/albumArt/<?php echo $q[0]["name"];?>" alt = "featured album 1">
+<div class="under"><?php echo $q[0]["price"]; ?></div>
 </div>
-
-  <?php 
-  $query=$db->query("SELECT name, displayName, price FROM albums ORDER BY RAND() LIMIT 1");
-  $query = $query->fetch();
-  ?>
-  <div class="each"><img src="css/albumArt/<?php echo $query["name"];?>" alt = "featured album 2"><div class="under2"><?php echo $query["price"]; ?></div>
+  <div class="each"><img src="css/albumArt/<?php echo $q[1]["name"];?>" alt = "featured album 2"><div class="under2"><?php echo $q[1]["price"]; ?></div>
   </div>
-  <?php 
-  $query=$db->query("SELECT name, displayName, price FROM albums ORDER BY RAND() LIMIT 1");
-  $query = $query->fetch(); ?>
-  <div class="each"><img src="css/albumArt/<?php echo $query["name"];?>" alt = "featured album 3"><div class="under3"><?php echo $query["price"]; ?></div></div>
-  <?php 
-  $query=$db->query("SELECT name, displayName, price FROM albums ORDER BY RAND() LIMIT 1");
-  $query = $query->fetch(); ?>
-  <div class="each"><img src="css/albumArt/<?php echo $query["name"];?>" alt = "featured album 4"><div class="under4"><?php echo $query["price"]; ?></div></div>
+  <div class="each"><img src="css/albumArt/<?php echo $q[2]["name"];?>" alt = "featured album 3"><div class="under3"><?php echo $q[2]["price"]; ?></div></div>
+  <div class="each"><img src="css/albumArt/<?php echo $q[3]["name"];?>" alt = "featured album 4"><div class="under4"><?php echo $q[3]["price"]; ?></div></div>
 </div>
     </body>
 </html>
