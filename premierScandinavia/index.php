@@ -20,7 +20,8 @@
             Scandinavian albums.
         </div>
 
-<?php require "helper.php";
+<?php 
+require "helper.php";
 
 function checkDupes($nameDupes){
     $use = array($nameDupes[0]["name"], $nameDupes[1]["name"], $nameDupes[2]["name"], $nameDupes[3]["name"]);
@@ -34,7 +35,6 @@ $query = $query->fetchAll();
 $q = array($query[rand(0,11)], $query[rand(0,11)], $query[rand(0,11)], $query[rand(0,11)]);
 while (checkDupes($q))
 $q = array($query[rand(0,11)], $query[rand(0,11)], $query[rand(0,11)], $query[rand(0,11)]);
-
 ?>
 <div class="featimg">
   <div class="each">
