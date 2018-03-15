@@ -20,7 +20,7 @@
                 <?php 
                 if(isset($_SESSION["id"])){ 
                     echo $_SESSION["users"];
-                    echo '<a href="cart.php">\'s Cart</a>';
+                    echo '<a href="cart.php?album=none">\'s Cart</a>';
                 }
                 elseif(!(isset($_SESSION["id"]))) 
                     echo '<a href="login.php">Login</a>';

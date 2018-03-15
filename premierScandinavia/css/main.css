@@ -24,6 +24,18 @@ width:20%;
 margin-top:1%;
 }
 
+.cart{
+position: absolute;
+margin-left:4%;
+margin-top:1%;
+}
+
+.cart2{
+	margin-top:8%;
+	width:35%;
+	margin-left:4%;
+}
+
 .featca{
 position: absolute;
 left: 50%;

@@ -33,6 +33,7 @@ function checkDupes($nameDupes){
 $db=database();
 $query=$db->query("SELECT name, displayName, price FROM albums");
 $query = $query->fetchAll();
+$_SESSION["product"] = $query;
 $q = array($query[rand(0,11)], $query[rand(0,11)], $query[rand(0,11)], $query[rand(0,11)]);
 while (checkDupes($q))
 $q = array($query[rand(0,11)], $query[rand(0,11)], $query[rand(0,11)], $query[rand(0,11)]);
@@ -40,13 +41,13 @@ $q = array($query[rand(0,11)], $query[rand(0,11)], $query[rand(0,11)], $query[ra
 ?>
 <div class="featimg">
   <div class="each">
-<a href = "cart.php?<?php echo $q[0]["name"];?>"><img src="css/albumArt/<?php echo $q[0]["name"];?>" alt = "featured album 1"></a>
+<a href = "cart.php?album=<?php echo $q[0]["name"];?>"><img src="css/albumArt/<?php echo $q[0]["name"];?>" alt = "featured album 1"></a>
 <div class="under"><?php echo $q[0]["price"]; ?></div>
 </div>
-  <div class="each"><a href = "cart.php?<?php echo $q[1]["name"];?>"><img src="css/albumArt/<?php echo $q[1]["name"];?>" alt = "featured album 2"></a><div class="under2"><?php echo $q[1]["price"]; ?></div>
+  <div class="each"><a href = "cart.php?album=<?php echo $q[1]["name"];?>"><img src="css/albumArt/<?php echo $q[1]["name"];?>" alt = "featured album 2"></a><div class="under2"><?php echo $q[1]["price"]; ?></div>
   </div>
-  <div class="each"><a href = "cart.php?<?php echo $q[2]["name"];?>"><img src="css/albumArt/<?php echo $q[2]["name"];?>" alt = "featured album 3"></a><div class="under3"><?php echo $q[2]["price"]; ?></div></div>
-  <div class="each"><a href = "cart.php?<?php echo $q[3]["name"];?>"><img src="css/albumArt/<?php echo $q[3]["name"];?>" alt = "featured album 4"></a><div class="under4"><?php echo $q[3]["price"]; ?></div></div>
+  <div class="each"><a href = "cart.php?album=<?php echo $q[2]["name"];?>"><img src="css/albumArt/<?php echo $q[2]["name"];?>" alt = "featured album 3"></a><div class="under3"><?php echo $q[2]["price"]; ?></div></div>
+  <div class="each"><a href = "cart.php?album=<?php echo $q[3]["name"];?>"><img src="css/albumArt/<?php echo $q[3]["name"];?>" alt = "featured album 4"></a><div class="under4"><?php echo $q[3]["price"]; ?></div></div>
 </div>
     </body>
 </html>
