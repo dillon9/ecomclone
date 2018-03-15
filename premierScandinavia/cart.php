@@ -35,6 +35,9 @@
                             }
                         }
                     }
+                    if ($total == 0)
+                        print "Your cart is empty";
+                    else
                     print "Total: $total";
                     print"</pre>";
                 }
