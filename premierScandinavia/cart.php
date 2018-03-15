@@ -47,14 +47,25 @@
                     $_SESSION["cart"][] = "none";
 
                 if(isset($_SESSION["id"])){
+                    echo '
+                    <script type="text/javascript">
+                    if (window.performance){
+                    console.info("something");
+                    }
+                     if (performance.navigation.type == 1) {
+                        window.location.href = "cart.php?album=none";
+                    } 
+                    else{
+                        console.info("do nothing");
+                    }
+                    </script>';
                     $album = $_GET["album"];
+                    unset($_GET["album"]);
                     if ($album == "none")
                         displayCart($_SESSION["cart"],$product);
                     else{
-                        $_SESSION["cart"][]=$_GET["album"];
+                        $_SESSION["cart"][]=$album;
                         displayCart($_SESSION["cart"],$product);
-                        //echo "Item added to cart:<br>";
-                        //echo $_GET["album"];
                     }
                 }
                 //unset($_SESSION["cart"]);
