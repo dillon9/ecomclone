@@ -24,6 +24,15 @@ width:20%;
 margin-top:1%;
 }
 
+.red{
+	color:red;
+	text-decoration:none;
+}
+
+a:hover{
+	text-decoration:none;
+}
+
 .cart{
 position: absolute;
 margin-left:4%;
@@ -32,7 +41,7 @@ margin-top:1%;
 
 .cart2{
 	margin-top:8%;
-	width:37%;
+	width:40%;
 	margin-left:4%;
 }
 

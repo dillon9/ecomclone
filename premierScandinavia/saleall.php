@@ -17,58 +17,64 @@
     <body>
         <header><?php require "navbar.php";?></header>
 
-
-<?php require "helper.php";
+<?php 
+require "helper.php";
 $db=database();
-$query=$db->query("SELECT name, displayName, price FROM albums WHERE name = 'abbavou.png'");
-$query = $query->fetch();?>
+$query=$db->query("SELECT name, displayName, price FROM albums");
+$query = $query->fetchAll();
+if (!(isset($_SESSION["product"])))
+    $_SESSION["product"] = $query;
+?>
         <div class="featimg2">
-        <div class="each2"><img src="css/albumArt/abbavou.png" alt = "featured album 1"></div>
-        <?php
-        $query=$db->query("SELECT name, displayName, price FROM albums WHERE name = 'akhanden.png'");
-        $query = $query->fetch();?>
-        <div class="each2"><img src="css/albumArt/akhanden.png" alt = "featured album 2"></div>
-        <?php
-        $query=$db->query("SELECT name, displayName, price FROM albums WHERE name = 'aobsign.png'");
-        $query = $query->fetch();?>
-        <div class="each2"><img src="css/albumArt/aobsign.png" alt = "featured album 3"></div>
-        <?php
-        $query=$db->query("SELECT name, displayName, price FROM albums WHERE name = 'hellagod.png'");
-        $query = $query->fetch();?>
-        <div class="each2"><img src="css/albumArt/hellagod.png" alt = "featured album 4"></div>
-        <?php
-        $query=$db->query("SELECT name, displayName, price FROM albums WHERE name = 'hellarock.png'");
-        $query = $query->fetch();?>
-        <div class="each2"><img src="css/albumArt/hellarock.png" alt = "featured album 1"></div>
-        <?php
-        $query=$db->query("SELECT name, displayName, price FROM albums WHERE name = 'hellavis.png'");
-        $query = $query->fetch();?>
-        <div class="each2"><img src="css/albumArt/hellavis.png" alt = "featured album 2"></div>
-        <?php
-        $query=$db->query("SELECT name, displayName, price FROM albums WHERE name = 'lk14becks.png'");
-        $query = $query->fetch();?>
-        <div class="each2"><img src="css/albumArt/lk14becks.png" alt = "featured album 3"></div>
-        <?php
-        $query=$db->query("SELECT name, displayName, price FROM albums WHERE name = 'lk14som.png'");
-        $query = $query->fetch();?>
-        <div class="each2"><img src="css/albumArt/lk14som.png" alt = "featured album 4"></div>
-        <?php
-        $query=$db->query("SELECT name, displayName, price FROM albums WHERE name = 'lk14storm.png'");
-        $query = $query->fetch();?>
-        <div class="each2"><img src="css/albumArt/lk14storm.png" alt = "featured album 1"></div>
-        <?php
-        $query=$db->query("SELECT name, displayName, price FROM albums WHERE name = 'tbngrapoc.png'");
-        $query = $query->fetch();?>
-        <div class="each2"><img src="css/albumArt/tbngrapoc.png" alt = "featured album 2"></div>
-        <?php
-        $query=$db->query("SELECT name, displayName, price FROM albums WHERE name = 'tbngrretox.png'");
-        $query = $query->fetch();?>
-        <div class="each2"><img src="css/albumArt/tbngrretox.png" alt = "featured album 3"></div>
-        <?php
-        $query=$db->query("SELECT name, displayName, price FROM albums WHERE name = 'tbngrscand.png'");
-        $query = $query->fetch();?>
-        <div class="each2"><img src="css/albumArt/tbngrscand.png" alt = "featured album 4"></div>
+
+        <div class="each2">
+        <a href = "cart.php?album=<?php echo $query[0]["name"];?>">
+        <img src="css/albumArt/<?php echo $query[0]["name"];?>" alt = "featured album 1"></a>
         </div>
+        <div class="each2">
+        <a href = "cart.php?album=<?php echo $query[1]["name"];?>">
+        <img src="css/albumArt/<?php echo $query[1]["name"];?>" alt = "featured album 1"></a>
+        </div>
+        <div class="each2">
+        <a href = "cart.php?album=<?php echo $query[2]["name"];?>">
+        <img src="css/albumArt/<?php echo $query[2]["name"];?>" alt = "featured album 1"></a>
+        </div>
+        <div class="each2">
+        <a href = "cart.php?album=<?php echo $query[3]["name"];?>">
+        <img src="css/albumArt/<?php echo $query[3]["name"];?>" alt = "featured album 1"></a>
+        </div>
+        <div class="each2">
+        <a href = "cart.php?album=<?php echo $query[4]["name"];?>">
+        <img src="css/albumArt/<?php echo $query[4]["name"];?>" alt = "featured album 1"></a>
+        </div>
+        <div class="each2">
+        <a href = "cart.php?album=<?php echo $query[5]["name"];?>">
+        <img src="css/albumArt/<?php echo $query[5]["name"];?>" alt = "featured album 1"></a>
+        </div>
+        <div class="each2">
+        <a href = "cart.php?album=<?php echo $query[6]["name"];?>">
+        <img src="css/albumArt/<?php echo $query[6]["name"];?>" alt = "featured album 1"></a>
+        </div>
+        <div class="each2">
+        <a href = "cart.php?album=<?php echo $query[7]["name"];?>">
+        <img src="css/albumArt/<?php echo $query[7]["name"];?>" alt = "featured album 1"></a>
+        </div>
+        <div class="each2">
+        <a href = "cart.php?album=<?php echo $query[8]["name"];?>">
+        <img src="css/albumArt/<?php echo $query[8]["name"];?>" alt = "featured album 1"></a>
+        </div>
+        <div class="each2">
+        <a href = "cart.php?album=<?php echo $query[9]["name"];?>">
+        <img src="css/albumArt/<?php echo $query[9]["name"];?>" alt = "featured album 1"></a>
+        </div>
+        <div class="each2">
+        <a href = "cart.php?album=<?php echo $query[10]["name"];?>">
+        <img src="css/albumArt/<?php echo $query[10]["name"];?>" alt = "featured album 1"></a>
+        </div>        
+        <div class="each2">
+        <a href = "cart.php?album=<?php echo $query[11]["name"];?>">
+        <img src="css/albumArt/<?php echo $query[11]["name"];?>" alt = "featured album 1"></a>
+        </div>        </div>
 
 
     </body>

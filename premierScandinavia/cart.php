@@ -20,6 +20,7 @@
             <h1>Cart</h1>
         </div>
         <div class="cart2">
+
                 <?php
                 function displayCart($ar,$product){
                     $total=0;
@@ -31,6 +32,9 @@
                                 print_r($product[$c]["displayName"]);
                                 echo "&nbsp-&nbsp";
                                 print_r($product[$c]["price"]);
+                                ?>
+                                <a href = "cart.php?remove=<?php echo $product[$c]["name"];?>"><div class="red">x</div></a>
+                                <?php
                                 print "<br>";
                             }
                         }
@@ -47,8 +51,7 @@
                     $_SESSION["cart"][] = "none";
 
                 if(isset($_SESSION["id"])){
-                    echo '
-                    <script type="text/javascript">
+                    echo '<script type="text/javascript">
                     if (window.performance){
                     console.info("something");
                     }
@@ -59,16 +62,28 @@
                         console.info("do nothing");
                     }
                     </script>';
-                    $album = $_GET["album"];
-                    unset($_GET["album"]);
-                    if ($album == "none")
-                        displayCart($_SESSION["cart"],$product);
-                    else{
-                        $_SESSION["cart"][]=$album;
-                        displayCart($_SESSION["cart"],$product);
+                    if(isset($_GET["album"])){
+                        $album = $_GET["album"];
+                        if ($album == "none")
+                            displayCart($_SESSION["cart"],$product);
+                        else{
+                            $_SESSION["cart"][]=$album;
+                            displayCart($_SESSION["cart"],$product);
+                    }
+                    }
+                    if(isset($_GET["remove"])){
+                        for($i = 0;$i < count($_SESSION["cart"]); $i++){
+                            if($_SESSION["cart"][$i] == $_GET["remove"]){
+                                array_splice($_SESSION["cart"],$i,1);
+                                array_values($_SESSION["cart"]);
+                                break;
+                            }
+                        }
+                        echo '<script type="text/javascript">window.location.href="cart.php?album=none";</script>';
                     }
                 }
-                //unset($_SESSION["cart"]);
+                print_r($_SESSION["cart"]);
+                //unset($_SESSION["cart"]); nuclear option for when things go south
             ?>
             </div>
     </body>
