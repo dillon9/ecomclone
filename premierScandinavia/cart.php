@@ -20,7 +20,6 @@
             <h1>Cart</h1>
         </div>
         <div class="cart2">
-
                 <?php
                 function displayCart($ar,$product){
                     $total=0;
@@ -46,43 +45,50 @@
                     print"</pre>";
                 }
 
-                $product = $_SESSION["product"];
-                if (!($_SESSION["cart"][0]))
-                    $_SESSION["cart"][] = "none";
+                if (isset($_SESSION["id"])){
+                    $product = $_SESSION["product"];
 
-                if(isset($_SESSION["id"])){
-                    echo '<script type="text/javascript">
-                    if (window.performance){
-                    console.info("something");
-                    }
-                     if (performance.navigation.type == 1) {
-                        window.location.href = "cart.php?album=none";
-                    } 
-                    else{
-                        console.info("do nothing");
-                    }
-                    </script>';
-                    if(isset($_GET["album"])){
-                        $album = $_GET["album"];
-                        if ($album == "none")
-                            displayCart($_SESSION["cart"],$product);
-                        else{
-                            $_SESSION["cart"][]=$album;
-                            displayCart($_SESSION["cart"],$product);
-                    }
-                    }
-                    if(isset($_GET["remove"])){
-                        for($i = 0;$i < count($_SESSION["cart"]); $i++){
-                            if($_SESSION["cart"][$i] == $_GET["remove"]){
-                                array_splice($_SESSION["cart"],$i,1);
-                                array_values($_SESSION["cart"]);
-                                break;
-                            }
+                    if (!($_SESSION["cart"][0]))
+                        $_SESSION["cart"][] = "none";
+
+                    if(isset($_SESSION["id"])){
+                        echo '<script type="text/javascript">
+                        if (window.performance){
+                        console.info("something");
                         }
-                        echo '<script type="text/javascript">window.location.href="cart.php?album=none";</script>';
+                         if (performance.navigation.type == 1) {
+                            window.location.href = "cart.php?album=none";
+                        } 
+                        else{
+                            console.info("do nothing");
+                        }
+                        </script>';
+                        if(isset($_GET["album"])){
+                            $album = $_GET["album"];
+                            if ($album == "none")
+                                displayCart($_SESSION["cart"],$product);
+                            else{
+                                $_SESSION["cart"][]=$album;
+                                displayCart($_SESSION["cart"],$product);
+                        }
+                        }
+                        if(isset($_GET["remove"])){
+                            for($i = 0;$i < count($_SESSION["cart"]); $i++){
+                                if($_SESSION["cart"][$i] == $_GET["remove"]){
+                                    array_splice($_SESSION["cart"],$i,1);
+                                    array_values($_SESSION["cart"]);
+                                    break;
+                                }
+                            }
+                            echo '<script type="text/javascript">window.location.href="cart.php?album=none";</script>';
+                        }
                     }
-                }
                 //unset($_SESSION["cart"]); nuclear option for when things go south
+                }
+                else{
+                    echo 'You are not <a href = "login.php" >logged</a> in.';
+                }
+                
             ?>
             </div>
     </body>

@@ -27,6 +27,7 @@ margin-top:1%;
 .red{
 	color:red;
 	text-decoration:none;
+	display:inline;
 }
 
 a:hover{
@@ -43,6 +44,7 @@ margin-top:1%;
 	margin-top:8%;
 	width:40%;
 	margin-left:4%;
+	display:inline-block;
 }
 
 .featca{
