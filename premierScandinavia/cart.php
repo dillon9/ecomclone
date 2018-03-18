@@ -51,18 +51,18 @@
                     if (!($_SESSION["cart"][0]))
                         $_SESSION["cart"][] = "none";
 
-                    if(isset($_SESSION["id"])){
-                        echo '<script type="text/javascript">
-                        if (window.performance){
-                        console.info("something");
-                        }
-                         if (performance.navigation.type == 1) {
-                            window.location.href = "cart.php?album=none";
-                        } 
-                        else{
-                            console.info("do nothing");
-                        }
-                        </script>';
+                    //if(isset($_SESSION["id"])){
+                    //    echo '<script type="text/javascript">
+                    //    if (window.performance){
+                    //    console.info("something");
+                    //    }
+                    //     if (performance.navigation.type == 1) {
+                    //        window.location.href = "cart.php?album=none";
+                    //    } 
+                    //    else{
+                    //        console.info("do nothing");
+                    //    }
+                    //    </script>';
                         if(isset($_GET["album"])){
                             $album = $_GET["album"];
                             if ($album == "none")
@@ -82,13 +82,16 @@
                             }
                             echo '<script type="text/javascript">window.location.href="cart.php?album=none";</script>';
                         }
-                    }
+                    //}
                 //unset($_SESSION["cart"]); nuclear option for when things go south
                 }
                 else{
                     echo 'You are not <a href = "login.php" >logged</a> in.';
                 }
                 
+                if (!($_GET["album"] == "none")){
+                    header("Location:cart.php?album=none");
+                } 
             ?>
             </div>
     </body>
