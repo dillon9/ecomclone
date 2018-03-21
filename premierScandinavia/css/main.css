@@ -1,4 +1,8 @@
-body{
+*x{
+	outline:1px solid red;
+}
+
+bodyx{
 	background-color:#F2F2F2;
 }
 
@@ -28,10 +32,18 @@ margin-top:1%;
 	color:red;
 	text-decoration:none;
 	display:inline;
+	width:25%;
+	margin-left:10px;
 }
 
 a:hover{
 	text-decoration:none;
+}
+
+.price2{
+	width:90%;
+	margin-top:10px;
+
 }
 
 .cart{

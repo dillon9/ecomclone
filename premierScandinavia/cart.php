@@ -23,26 +23,28 @@
                 <?php
                 function displayCart($ar,$product){
                     $total=0;
-                    print"<pre>";
+                    echo"<pre>";
                     for($i = 0;$i < count($ar); $i++){
                         for($c = 0;$c < count($product); $c++){
                             if ($ar[$i] == $product[$c]["name"]){
                                 $total += $product[$c]["price"];
-                                print_r($product[$c]["displayName"]);
+                                echo '<div class = "price2">';
+                                $x = 'cart.php?remove='.$product[$c]["name"].'';
+                                echo($product[$c]["displayName"]);
+                                //echo '<a href="'.$link_address.'"></a>';
                                 echo "&nbsp-&nbsp";
-                                print_r($product[$c]["price"]);
-                                ?>
-                                <a href = "cart.php?remove=<?php echo $product[$c]["name"];?>"><div class="red">x</div></a>
-                                <?php
-                                print "<br>";
+                                echo($product[$c]["price"].'<a href="'.$x.'"><div class = "red">x</div></a>');
+                                echo '</div>';
+
+                                echo "<br>";
                             }
                         }
                     }
                     if ($total == 0)
-                        print "Your cart is empty";
+                        echo "Your cart is empty";
                     else
-                    print "Total: $total";
-                    print"</pre>";
+                    echo "Total: $total";
+                    echo"</pre>";
                 }
 
                 if (isset($_SESSION["id"])){
@@ -51,18 +53,18 @@
                     if (!($_SESSION["cart"][0]))
                         $_SESSION["cart"][] = "none";
 
-                    //if(isset($_SESSION["id"])){
-                    //    echo '<script type="text/javascript">
-                    //    if (window.performance){
-                    //    console.info("something");
-                    //    }
-                    //     if (performance.navigation.type == 1) {
-                    //        window.location.href = "cart.php?album=none";
-                    //    } 
-                    //    else{
-                    //        console.info("do nothing");
-                    //    }
-                    //    </script>';
+                    if(isset($_SESSION["id"])){
+                        echo '<script type="text/javascript">
+                        if (window.performance){
+                        console.info("something");
+                        }
+                         if (performance.navigation.type == 1) {
+                            window.location.href = "cart.php?album=none";
+                        } 
+                        else{
+                            console.info("do nothing");
+                        }
+                        </script>';
                         if(isset($_GET["album"])){
                             $album = $_GET["album"];
                             if ($album == "none")
@@ -82,7 +84,7 @@
                             }
                             echo '<script type="text/javascript">window.location.href="cart.php?album=none";</script>';
                         }
-                    //}
+                    }
                 //unset($_SESSION["cart"]); nuclear option for when things go south
                 }
                 else{
