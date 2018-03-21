@@ -28,10 +28,9 @@
                         for($c = 0;$c < count($product); $c++){
                             if ($ar[$i] == $product[$c]["name"]){
                                 $total += $product[$c]["price"];
-                                echo '<div class = "price2">';
                                 $x = 'cart.php?remove='.$product[$c]["name"].'';
+                                echo '<div class = "price2">';
                                 echo($product[$c]["displayName"]);
-                                //echo '<a href="'.$link_address.'"></a>';
                                 echo "&nbsp-&nbsp";
                                 echo($product[$c]["price"].'<a href="'.$x.'"><div class = "red">x</div></a>');
                                 echo '</div>';
