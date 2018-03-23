@@ -92,6 +92,7 @@
                 
                 if (!($_GET["album"] == "none")){
                     header("Location:cart.php?album=none");
+                    exit();
                 } 
             ?>
             </div>
