@@ -5,6 +5,7 @@ if (isset($_POST["add"])){
 $db = database();
 $id = $_POST["id"];
 $password = $_POST["password"];
+$password = crypt($password,"a tiny bit of yolo");
 $email = $_POST["email"];
 $query = $db->prepare("SELECT * FROM users WHERE username = :user");
 $query->execute(array("user"=>$id));

@@ -6,6 +6,7 @@ $db = database();
 if (isset($_POST["login"])){
 $username = $_POST["id"];
 $password = $_POST["password"];
+$password = crypt($password, "a tiny bit of yolo");
 $query=$db->prepare("SELECT * FROM users WHERE username = :id && password = :pass");
 $query->execute(array("id"=>$username, "pass"=>$password));
 $checker = $query->fetch();
