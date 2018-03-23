@@ -19,7 +19,7 @@
             <a>
                 <?php 
                 if(isset($_SESSION["id"])){ 
-                    echo $_SESSION["users"];
+                    echo substr($_SESSION["users"], 0, 11);
                     echo '<a href="cart.php?album=none">\'s Cart</a>';
                 }
                 elseif(!(isset($_SESSION["id"]))) 
