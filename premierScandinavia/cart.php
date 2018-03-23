@@ -87,7 +87,7 @@
                 //unset($_SESSION["cart"]); nuclear option for when things go south
                 }
                 else{
-                    echo 'You are not <a href = "login.php" >logged</a> in.';
+                    echo 'You are not permitted a cart without <a href = "login.php" >logging</a> in.';
                 }
                 
                 if (!($_GET["album"] == "none")){

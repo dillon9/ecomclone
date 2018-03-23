@@ -30,51 +30,63 @@ if (!(isset($_SESSION["product"])))
         <div class="each2">
         <a href = "cart.php?album=<?php echo $query[0]["name"];?>">
         <img src="css/albumArt/<?php echo $query[0]["name"];?>" alt = "featured album 1"></a>
+        <div class="sunder1"><?php echo "$".$query[0]["price"];?></div>
         </div>
         <div class="each2">
         <a href = "cart.php?album=<?php echo $query[1]["name"];?>">
         <img src="css/albumArt/<?php echo $query[1]["name"];?>" alt = "featured album 1"></a>
+        <div class="sunder2"><?php echo "$".$query[1]["price"];?></div>
         </div>
         <div class="each2">
         <a href = "cart.php?album=<?php echo $query[2]["name"];?>">
         <img src="css/albumArt/<?php echo $query[2]["name"];?>" alt = "featured album 1"></a>
+        <div class="sunder3"><?php echo "$".$query[2]["price"];?></div>
         </div>
         <div class="each2">
         <a href = "cart.php?album=<?php echo $query[3]["name"];?>">
         <img src="css/albumArt/<?php echo $query[3]["name"];?>" alt = "featured album 1"></a>
+        <div class="sunder4"><?php echo "$".$query[3]["price"];?></div>
         </div>
         <div class="each2">
         <a href = "cart.php?album=<?php echo $query[4]["name"];?>">
         <img src="css/albumArt/<?php echo $query[4]["name"];?>" alt = "featured album 1"></a>
+        <div class="sunder5"><?php echo "$".$query[4]["price"];?></div>
         </div>
         <div class="each2">
         <a href = "cart.php?album=<?php echo $query[5]["name"];?>">
         <img src="css/albumArt/<?php echo $query[5]["name"];?>" alt = "featured album 1"></a>
+        <div class="sunder6"><?php echo "$".$query[5]["price"];?></div>
         </div>
         <div class="each2">
         <a href = "cart.php?album=<?php echo $query[6]["name"];?>">
         <img src="css/albumArt/<?php echo $query[6]["name"];?>" alt = "featured album 1"></a>
+        <div class="sunder7"><?php echo "$".$query[6]["price"];?></div>
         </div>
         <div class="each2">
         <a href = "cart.php?album=<?php echo $query[7]["name"];?>">
         <img src="css/albumArt/<?php echo $query[7]["name"];?>" alt = "featured album 1"></a>
+        <div class="sunder8"><?php echo "$".$query[7]["price"];?></div>
         </div>
         <div class="each2">
         <a href = "cart.php?album=<?php echo $query[8]["name"];?>">
         <img src="css/albumArt/<?php echo $query[8]["name"];?>" alt = "featured album 1"></a>
+        <div class="sunder9"><?php echo "$".$query[8]["price"];?></div>
         </div>
         <div class="each2">
         <a href = "cart.php?album=<?php echo $query[9]["name"];?>">
         <img src="css/albumArt/<?php echo $query[9]["name"];?>" alt = "featured album 1"></a>
+        <div class="sunder10"><?php echo "$".$query[9]["price"];?></div>
         </div>
         <div class="each2">
         <a href = "cart.php?album=<?php echo $query[10]["name"];?>">
         <img src="css/albumArt/<?php echo $query[10]["name"];?>" alt = "featured album 1"></a>
+        <div class="sunder11"><?php echo "$".$query[10]["price"];?></div>
         </div>        
         <div class="each2">
         <a href = "cart.php?album=<?php echo $query[11]["name"];?>">
         <img src="css/albumArt/<?php echo $query[11]["name"];?>" alt = "featured album 1"></a>
-        </div>        </div>
+        <div class="sunder12"><?php echo "$".$query[11]["price"];?></div>
+        </div></div>
 
 
     </body>
