@@ -23,6 +23,7 @@
                 <?php
                 function displayCart($ar,$product){
                     $total=0;
+                    $check = '<div class = "checkout"><a href="checkout.php">Checkout</a></div>';
                     echo"<pre>";
                     for($i = 0;$i < count($ar); $i++){
                         for($c = 0;$c < count($product); $c++){
@@ -42,7 +43,7 @@
                     if ($total == 0)
                         echo "Your cart is empty";
                     else
-                    echo "Total: $total";
+                    echo "Total: $total".$check;
                     echo"</pre>";
                 }
 

@@ -19,8 +19,8 @@
             <a>
                 <?php 
                 if(isset($_SESSION["id"])){ 
-                    echo substr($_SESSION["users"], 0, 11);
-                    echo '<a href="cart.php?album=none">\'s Cart</a>';
+                    $x = substr($_SESSION["users"], 0, 11);
+                    echo '<a href="cart.php?album=none">'.$x.'\'s Cart</a>';
                 }
                 elseif(!(isset($_SESSION["id"]))) 
                     echo '<a href="login.php">Login</a>';
