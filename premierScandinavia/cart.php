@@ -1,4 +1,13 @@
-<?php session_start();?>
+<?php
+session_start();
+if(isset($_GET["album"])){
+    $album = $_GET["album"];
+    if ($album != "none") {
+        $_SESSION["cart"][]=$album;
+        header("Location: /cart.php?album=none");
+    }
+}
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -33,19 +42,21 @@
                                 echo '<div class = "price2">';
                                 echo($product[$c]["displayName"]);
                                 echo "&nbsp-&nbsp";
-                                echo($product[$c]["price"].'<a href="'.$x.'"><div class = "red">x</div></a>');
+                                echo("$".$product[$c]["price"].'<a href="'.$x.'"><div class = "red">x</div></a>');
                                 echo '</div>';
 
                                 echo "<br>";
                             }
                         }
                     }
+                    $_SESSION["total"] = $total;
                     if ($total == 0)
                         echo "Your cart is empty";
                     else
-                    echo "Total: $total".$check;
+                    echo "Total: $$total".$check;
                     echo"</pre>";
                 }
+
 
                 if (isset($_SESSION["id"])){
                     $product = $_SESSION["product"];
@@ -65,15 +76,8 @@
                             console.info("do nothing");
                         }
                         </script>';
-                        if(isset($_GET["album"])){
-                            $album = $_GET["album"];
-                            if ($album == "none")
-                                displayCart($_SESSION["cart"],$product);
-                            else{
-                                $_SESSION["cart"][]=$album;
-                                displayCart($_SESSION["cart"],$product);
-                        }
-                        }
+
+                        displayCart($_SESSION["cart"], $product);
                         if(isset($_GET["remove"])){
                             for($i = 0;$i < count($_SESSION["cart"]); $i++){
                                 if($_SESSION["cart"][$i] == $_GET["remove"]){
@@ -90,11 +94,6 @@
                 else{
                     echo 'You are not permitted a cart without <a href = "login.php" >logging</a> in.';
                 }
-                
-                if (!($_GET["album"] == "none")){
-                    header("Location:cart.php?album=none");
-                    exit();
-                } 
             ?>
             </div>
     </body>

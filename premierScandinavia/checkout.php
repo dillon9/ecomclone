@@ -16,9 +16,15 @@
     </head>
     <body>
         <header><?php require "navbar.php";?></header>
-        <div class="simple">
+         <div class="cart">
+            <h1>Checkout</h1>
+        </div>
+        <div class="cart2">
             <?php 
-                
+                echo("<pre>");
+                echo("Your total is: $".$_SESSION["total"]);
+                echo("<br>This is where the checkout stuff goes");
+                echo("</pre>");
             ?>
         </div>
 
